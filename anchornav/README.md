@@ -13,10 +13,11 @@ Each headline will now have a new field where you can add an alias.
 ## Add id="[[+alias]]" you heading template
 Each link of your anchornav needs a target with a unique id attribute. The default template for headlines doesn't have an id attribute so we have to add it to it.
 
-###Template
+###Template: heading
 ```
 <[[+level]] class="heading" id="[[+alias]]">[[+value]]</[[+level]]>
 ```
+**Note:** It might be better for you to clone the heading template instead and use the copy for your changes. It's up to you.
 
 ## Template your anchornav
 Templating is very easy. You write a chunk for used for displaying each anchorlink and a wrapper where all the chunks will be filled in.
