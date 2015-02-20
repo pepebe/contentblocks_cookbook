@@ -17,7 +17,7 @@ Each link of your anchornav needs a target with a unique id attribute. The defau
 ```
 <[[+level]] class="heading" id="[[+alias]]">[[+value]]</[[+level]]>
 ```
-**Note:** It might be better for you to clone the heading template instead and use the copy for your changes. It's up to you.
+**Note:** It might be better for you to duplicate the heading template and use the copy for your all of your changes.
 
 ## Template your anchornav
 Templating is very easy. You write a chunk for used for displaying each anchorlink and a wrapper where all the chunks will be filled in.
