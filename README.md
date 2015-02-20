@@ -1,2 +1,2 @@
 # contentblocks_cookbook
-A collections of delicious recipes for contentblocks by modmore
+A collections of delicious recipies for contentblocks by modmore
