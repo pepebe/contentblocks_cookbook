@@ -53,7 +53,7 @@ Now all we have to do is to add the **cbGetFieldContent** snippet to your templa
    &fieldSettingsFilter=`alias!=`
 ]]
 ```
-Note If you are using multiple levels of headlines, you'll propably want to limit your anchornav to a certain level (for example h3). You can do this by modifying your fieldSettingsFilter property:
+**Note:** If you are using multiple levels of headlines, you'll propably want to limit the items in your your anchornav to a certain level (for example h3). You can do this by modifying your fieldSettingsFilter property:
 
 ``` &fieldSettingsFilter=`alias!=,level==h3` ```
 
