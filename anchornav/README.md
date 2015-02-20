@@ -1,6 +1,6 @@
 # How to add an anchor navigation to your template (v0.1)
 
-##About this recipy
+##About this recipe
 If your are building websites with content blocks by modmore, it is very easy to add an anchor navigation to it.
 
 In this example we will build an anchor navigation with links to all headlines included in your content.
