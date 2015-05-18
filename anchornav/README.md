@@ -5,51 +5,40 @@ If your are building websites with content blocks (cb) by modmore, it is very ea
 
 In this example we will build an anchor navigation with links to all headlines included in your content.
 
-## Craete a new cb template
+## Craete a new content block field type
 
-First go to settings and add a new property **alias** to your template. From now on it will be available as ```[[+alias]]``` inside the heading template.
+1. Open your "Content Blocks" CMP under "Extras". 
+2. Duplicate the "Heading" template. Give it a new name (for example: "Anchor").
+3. Now edit your new field type. 
+###General: 
+Add a meaningful description.
 
-Next, duplicate the heading template and give it a new name (For example: Anchor).
-
-## Add id="[[+alias]]" to your new template
-Each link of your anchornav needs a target with a unique id attribute. The default template for headlines doesn't have an id attribute so we have to add it to it.
-
-###Template: heading
-The exact html of your headline depends on your personal needs. If you want to be flexible, just add the id attribute to the template:
+###Properties: 
+Change the headling template to include the id attribute. Use the "alias" placeholder to give it a value.
 ```
 <[[+level]] class="heading" id="[[+alias]]">[[+value]]</[[+level]]>
 ```
-If you think that only headlines of a level 3 (h3) should be available, remove the level placeholder and use h3 instead. 
-```
-<h3 class="heading" id="[[+alias]]">[[+value]]</h3>
-```
-As the level property doesn't make sense in this context, you can remove level from the property list for this template.
 
-## Template your anchornav
-Templating is very easy. You write a chunk used for displaying each anchorlink and a wrapper where all the chunks will be filled in.
+###Availability
+No changes needed here.
 
-### Chunk: contentblocks_anchornav_tpl
-```
-<!-- contentblocks_anchornav_tpl --> 
- <li>
-    <a href="[[++site_url]][[~[[*id]]]]#[[+alias]]">
-        [[+value]]
-    </a>
-</li>
-```
+###Settings
+Each link of your anchornav needs a target with a unique id attribute. The default template for headlines doesn't have an id attribute so we have to add it to it. 
 
-###Chunk: contentblocks_anchornav_wrapTpl
-```
-<!-- contentblocks_anchornav_wrapTpl -->
-<ul class="nav navbar">
-[[+output]]
-</ul> 
-```
+Because naming the new field "id" might cause some problems, we'll call this field "alias" instead.
 
-## Add a snippet call to your template
+Add a new property to your anchor headline:
+* Reference: "alias"
+* Title: "Alias"
+* Field Type: "Text"
+* Default value: "Empty"
+* Expose field: Whatever you prefer.
+
+From now on alias will be available while editing an anchor.
+
+## Build your anchor navigation
 Now all we have to do is to add the **cbGetFieldContent** snippet to your template. It will grab all necessary data from your content and create a simple anchornar based on your templates.
 
-###Snippet: cbGetFieldContent
 ```
 <!-- cbGetFieldContent -->
 [[cbGetFieldContent?
@@ -60,10 +49,26 @@ Now all we have to do is to add the **cbGetFieldContent** snippet to your templa
    &fieldSettingsFilter=`alias!=`
 ]]
 ```
-**Note:** If you are using multiple levels of headlines, you'll propably want to limit the items in your your anchornav to a certain level (for example h3). You can do this by modifying your fieldSettingsFilter property:
+
+**fields:** The field paramter must contain the id of your new field. As ids are hidden from view in the list of fields, you have to switch them on. Move your mouse over the field label. Right-cloick on the arrow that appears on the right side. Hover over "Columns" and then activate the id column.
+**tpl/wrapTpl:** Templating cbgetFieldContent is very easy. You write a chunk used for displaying each anchorlink (tpl) and a wrapper where all the chunks will be filled in (wrapTpl).
+
+```
+<!-- contentblocks_anchornav_tpl --> 
+ <li>
+    <a href="[[++site_url]][[~[[*id]]]]#[[+alias]]">
+        [[+value]]
+    </a>
+</li>
+
+<!-- contentblocks_anchornav_wrapTpl -->
+<ul class="nav navbar">
+[[+output]]
+</ul> 
+```
+**fieldSettingsFilter:** You only want to add Anchors to your list that don't target empty alias fields. If you are using multiple levels of headlines, you'll propably want to limit the items in your your anchornav to a certain level (for example h3). You can do this by modifying your fieldSettingsFilter property:
 
 ``` &fieldSettingsFilter=`alias!=,level==h3` ```
-
 
 ## Conclusion
 Now you have an anchornav to all headlines on the current page that have an alias.
