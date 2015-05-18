@@ -10,6 +10,7 @@ In this example we will build an anchor navigation with links to all headlines i
 1. Open your "Content Blocks" CMP under "Extras". 
 2. Duplicate the "Heading" template. Give it a new name (for example: "Anchor").
 3. Now edit your new field type. 
+
 ###General: 
 Add a meaningful description.
 
