@@ -38,7 +38,7 @@ Add a new property to your anchor headline:
 From now on alias will be available while editing an anchor.
 
 ## Build your anchor navigation
-Now all we have to do is to add the **cbGetFieldContent** snippet to your template. It will grab all necessary data from your content and create a simple anchornar based on your templates.
+Now all we have to do is to add the **cbGetFieldContent** snippet to your template. It will grab all necessary data from your content and create a simple anchor navigation based on all anchor headlines.
 
 ```
 <!-- cbGetFieldContent -->
