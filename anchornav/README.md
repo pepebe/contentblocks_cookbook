@@ -10,7 +10,7 @@ Go to settings and add a new property **alias** to your template. From now on it
 
 Each headline will now have a new field where you can add an alias.
 
-## Add id="[[+alias]]" you heading template
+## Add id="[[+alias]]" to your heading template (or copy the default heading and create a new Anchor Headline)
 Each link of your anchornav needs a target with a unique id attribute. The default template for headlines doesn't have an id attribute so we have to add it to it.
 
 ###Template: heading
