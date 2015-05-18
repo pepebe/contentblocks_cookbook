@@ -5,19 +5,21 @@ If your are building websites with content blocks by modmore, it is very easy to
 
 In this example we will build an anchor navigation with links to all headlines included in your content.
 
-## Add a new propery to your heading template
-Go to settings and add a new property **alias** to your template. From now on it will be available as ```[[+alias]]``` inside the heading template.
+## Craete a new template
 
-Each headline will now have a new field where you can add an alias.
+First go to settings and add a new property **alias** to your template. From now on it will be available as ```[[+alias]]``` inside the heading template.
 
-## Add id="[[+alias]]" to your heading template (or copy the default heading and create a new Anchor Headline)
+Next, duplicate the heading template and give it a new name (For example: Anchor).
+
+## Add id="[[+alias]]" to your new template
 Each link of your anchornav needs a target with a unique id attribute. The default template for headlines doesn't have an id attribute so we have to add it to it.
 
 ###Template: heading
+The exact html of your headline depends on your personal needs. If you want to be flexible, just add the id attribute to the template:
 ```
 <[[+level]] class="heading" id="[[+alias]]">[[+value]]</[[+level]]>
 ```
-**Note:** It might be better for you to duplicate the heading template and use the copy for your all of your changes.
+If you think that only headlines of a level 3 (h3) should be available, remove the level placeholder and use h3 instead. As the level property doesn't make sense in this context, you can remove level from the property list for this template.
 
 ## Template your anchornav
 Templating is very easy. You write a chunk used for displaying each anchorlink and a wrapper where all the chunks will be filled in.
