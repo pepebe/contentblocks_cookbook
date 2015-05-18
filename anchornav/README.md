@@ -24,7 +24,7 @@ Change the headling template to include the id attribute. Use the "alias" placeh
 No changes needed here.
 
 ###Settings
-Each link of your anchornav needs a target with a unique id attribute. The default template for headlines doesn't have an id attribute so we have to add it to it. 
+Each link of your anchornav needs a target with a unique id attribute. The default template for headlines doesn't have an id attribute so we have to add it. 
 
 Because naming the new field "id" might cause some problems, we'll call this field "alias" instead.
 
