@@ -19,7 +19,11 @@ The exact html of your headline depends on your personal needs. If you want to b
 ```
 <[[+level]] class="heading" id="[[+alias]]">[[+value]]</[[+level]]>
 ```
-If you think that only headlines of a level 3 (h3) should be available, remove the level placeholder and use h3 instead. As the level property doesn't make sense in this context, you can remove level from the property list for this template.
+If you think that only headlines of a level 3 (h3) should be available, remove the level placeholder and use h3 instead. 
+```
+<h3 class="heading" id="[[+alias]]">[[+value]]</h3>
+```
+As the level property doesn't make sense in this context, you can remove level from the property list for this template.
 
 ## Template your anchornav
 Templating is very easy. You write a chunk used for displaying each anchorlink and a wrapper where all the chunks will be filled in.
