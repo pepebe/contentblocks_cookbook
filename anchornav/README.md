@@ -52,6 +52,7 @@ Now all we have to do is to add the **cbGetFieldContent** snippet to your templa
 ```
 
 **fields:** The field paramter must contain the id of your new field. As ids are hidden from view in the list of fields, you have to switch them on. Move your mouse over the field label. Right-click on the arrow that appears on the right side. Hover over "Columns" and then activate the "id" column.
+
 **tpl/wrapTpl:** Templating cbgetFieldContent is very easy. You write a chunk used for displaying each anchorlink (tpl) and a wrapper where all the chunks will be filled in (wrapTpl).
 
 ```
@@ -67,6 +68,7 @@ Now all we have to do is to add the **cbGetFieldContent** snippet to your templa
 [[+output]]
 </ul> 
 ```
+
 **fieldSettingsFilter:** You only want to add Anchors to your list that don't target empty alias fields. If you are using multiple levels of headlines, you'll propably want to limit the items in your your anchornav to a certain level (for example h3). You can do this by modifying your fieldSettingsFilter property:
 
 ``` &fieldSettingsFilter=`alias!=,level==h3` ```
