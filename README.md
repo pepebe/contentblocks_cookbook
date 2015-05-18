@@ -7,4 +7,4 @@ A collections of delicious recipies for contentblocks by modmore
 4. Do a pull request and I'll add your idea to the repo.
 
 # List of recipies
-1. Anchornav (by pepebe) - Create an anchornav to all/some headlines included in your page content.
+1. Anchornav (by pepebe) https://github.com/pepebe/contentblocks_cookbook/tree/master/anchornav - Create an anchornav to all/some headlines included in your page content.
