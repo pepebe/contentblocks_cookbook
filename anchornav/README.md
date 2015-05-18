@@ -52,7 +52,7 @@ Now all we have to do is to add the **cbGetFieldContent** snippet to your templa
 ###Snippet: cbGetFieldContent
 ```
 <!-- cbGetFieldContent -->
-[[!cbGetFieldContent?
+[[cbGetFieldContent?
    &field=`1`
    &resource=`[[*id]]`
    &tpl=`contentblocks_anchornav_tpl`
