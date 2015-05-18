@@ -5,7 +5,7 @@ If your are building websites with content blocks (cb) by modmore, it is very ea
 
 In this example we will build an anchor navigation with links to all headlines included in your content.
 
-## Craete a new content block field type
+## Create a new content block field type
 
 1. Open your "Content Blocks" CMP under "Extras". 
 2. Duplicate the "Heading" template. Give it a new name (for example: "Anchor").
