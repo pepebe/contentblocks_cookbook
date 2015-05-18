@@ -20,7 +20,7 @@ Each link of your anchornav needs a target with a unique id attribute. The defau
 **Note:** It might be better for you to duplicate the heading template and use the copy for your all of your changes.
 
 ## Template your anchornav
-Templating is very easy. You write a chunk for used for displaying each anchorlink and a wrapper where all the chunks will be filled in.
+Templating is very easy. You write a chunk used for displaying each anchorlink and a wrapper where all the chunks will be filled in.
 
 ### Chunk: contentblocks_anchornav_tpl
 ```
